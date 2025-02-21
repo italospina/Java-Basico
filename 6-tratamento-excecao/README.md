@@ -1,6 +1,6 @@
-```md
-# 🛠️ Tratamento de Exceções em Java com Try-Catch
 
+# 🛠️ Tratamento de Exceções em Java com Try-Catch
+```md
 O tratamento de exceções em Java é fundamental para lidar com erros inesperados e evitar que o programa pare abruptamente. O bloco `try-catch` permite capturar e tratar exceções de forma controlada.
 
 ## 📌 Estrutura Básica do Try-Catch
