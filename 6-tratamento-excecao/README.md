@@ -3,6 +3,7 @@
 ```md
 O tratamento de exceções em Java é fundamental para lidar com erros inesperados e evitar que o programa pare abruptamente. O bloco `try-catch` permite capturar e tratar exceções de forma controlada.
 
+
 ## 📌 Estrutura Básica do Try-Catch
 
 ```java
@@ -78,6 +79,45 @@ public class ExemploThrow {
             verificarIdade(16);
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
+        }
+    }
+}
+```
+
+## 🔹 Exceções `Exception` e `RuntimeException`
+
+Em Java, as exceções podem ser verificadas (`checked exceptions`) ou não verificadas (`unchecked exceptions`).
+
+### Exception (Checked Exception)
+Exceções verificadas são aquelas que devem ser tratadas obrigatoriamente com `try-catch` ou declaradas com `throws`.
+
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ExemploCheckedException {
+    public static void main(String[] args) {
+        try {
+            Scanner scanner = new Scanner(new File("arquivo.txt"));
+        } catch (FileNotFoundException e) {
+            System.out.println("Erro: Arquivo não encontrado.");
+        }
+    }
+}
+```
+
+### RuntimeException (Unchecked Exception)
+Exceções não verificadas ocorrem em tempo de execução e não exigem tratamento obrigatório.
+
+```java
+public class ExemploUncheckedException {
+    public static void main(String[] args) {
+        String texto = null;
+        try {
+            System.out.println(texto.length()); // Gera NullPointerException
+        } catch (NullPointerException e) {
+            System.out.println("Erro: Tentativa de acessar um objeto nulo.");
         }
     }
 }
