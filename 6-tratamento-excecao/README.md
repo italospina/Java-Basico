@@ -87,7 +87,7 @@ public class ExemploThrow {
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-usuario/java-try-catch.git
+   git clone https://github.com/italospina/Java-Basico/tree/main/6-tratamento-excecao
    ```
 2. Navegue até a pasta do projeto:
    ```sh
@@ -103,5 +103,11 @@ public class ExemploThrow {
 
 - [Documentação Oficial do Java](https://docs.oracle.com/en/java/)
 - [Java Tutorials](https://www.w3schools.com/java/)
-```
 
+
+## 📜 Licença
+
+Este repositório está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+Criado por [Italo Spina](https://github.com/italospina).
