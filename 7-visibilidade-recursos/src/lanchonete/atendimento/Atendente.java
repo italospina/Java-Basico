@@ -1,16 +1,17 @@
 package lanchonete.atendimento;
 
 public class Atendente {
-    //metodos privados
+
+    // Métodos privados (ações internas do atendente que não devem ser acessadas externamente)
     private void pegarLancheCozinha() {
         System.out.println("Atendente pegando lanche na cozinha");
     }
 
-    private void pegaPedidoBalcao() {
+    private void pegarPedidoBalcao() {
         System.out.println("Atendente pegando pedido no balcão");
     }
     
-    //metodos publicos
+    // Métodos públicos (ações disponíveis para outras classes)
     public void servirMesa() {
         pegarLancheCozinha();
         System.out.println("Atendente servindo mesa");
@@ -24,8 +25,7 @@ public class Atendente {
         System.out.println("Atendente anotando pedido");
     }
 
-    
-    //metodos defaut
+    // Métodos default (disponíveis apenas dentro do mesmo pacote)
     void trocarGas() {
         System.out.println("Atendente trocando gás");
     }

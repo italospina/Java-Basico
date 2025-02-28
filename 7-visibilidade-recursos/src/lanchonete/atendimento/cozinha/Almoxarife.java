@@ -2,28 +2,27 @@ package lanchonete.atendimento.cozinha;
 
 public class Almoxarife {
 
-    //metodos privados
-
-    private void controlarEntrada(){
-        System.out.println("Controlando a entrada de ingredientes");
+    // Métodos privados (ações internas que não devem ser acessíveis externamente)
+    private void controlarEntrada() {
+        System.out.println("Controlando a entrada de ingredientes no estoque");
     }
 
-    private void controlarSaida(){
-        System.out.println("Controlando a saída de ingredientes");
+    private void controlarSaida() {
+        System.out.println("Controlando a saída de ingredientes do estoque");
     }
 
-    //metodos publicos
+    // Métodos públicos (ações disponíveis para outras classes)
     public void pedirIngrediente() {
-        System.out.println("Almoxarife pedindo ingrediente");
+        System.out.println("Almoxarife solicitando ingredientes ao fornecedor");
     }
 
-    //metodos default
-    void entregarIngrediente(){
-        System.out.println("Entregando ingrediente");
-        controlarSaida();
+    // Métodos de acesso padrão (default) – visíveis apenas dentro do mesmo pacote
+    void entregarIngrediente() {
+        System.out.println("Almoxarife entregando ingrediente para a cozinha");
+        controlarSaida(); // Atualiza a saída de ingredientes ao entregar
     }
 
     void trocarGas() {
-        System.out.println("Almoxarife trocando gás");
+        System.out.println("Almoxarife realizando a troca do gás na cozinha");
     }
 }

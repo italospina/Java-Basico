@@ -7,46 +7,48 @@ import lanchonete.atendimento.cozinha.Cozinheiro;
 
 public class Estabelecimento {
     public static void main(String[] args) {
+        
+        // Instanciação do cozinheiro
         Cozinheiro cozinheiro = new Cozinheiro();
-        //ações que o estabelecimento NÃO precisa ter ciencia
+        
+        // Métodos internos do cozinheiro (ações que não precisam ser expostas ao estabelecimento)
         /* 
         cozinheiro.lavarIngredientes();
         cozinheiro.baterIngredientesLiquidificador();
-        cozinheiro.selecionaIngredienteLanche();
-        cozinheiro.selecionaIngredienteVitamina();
+        cozinheiro.selecionarIngredienteLanche();
+        cozinheiro.selecionarIngredienteVitamina();
         cozinheiro.prepararLanche();
         cozinheiro.prepararVitamina();
-        cozinheiro.preparaCombo(); 
+        cozinheiro.preparaCombo();
         */
 
-        //ações que o estabelecimento tem ciencia
+        // Métodos expostos para o estabelecimento
         cozinheiro.adicionarComboBalcao();
         cozinheiro.adicionarLancheBalcao();
         cozinheiro.adicionarSucoBalcao();
-
-        //não precisa criar um objeto para chamar o método
-        /*
-        Almoxarife almoxarife = new Almoxarife();
-        */
-
-        //ações que nao precisa estar disponivel para a aplicação
+        
+        // O almoxarife gerencia o estoque, mas suas ações não precisam ser chamadas diretamente
         /* 
+        Almoxarife almoxarife = new Almoxarife();
         almoxarife.controlarEntrada();
-        almoxarife.controlarSaida(); 
+        almoxarife.controlarSaida();
         */
         
+        // Instanciação do atendente
         Atendente atendente = new Atendente();
         
-        //ações que nao precisa estar disponivel para a aplicação
+        // Métodos internos do atendente
         /* 
         atendente.pegarLancheCozinha();
-        atendente.pegaPedidoBalcao(); 
+        atendente.pegaPedidoBalcao();
         */
+        
+        // Métodos expostos do atendente
         atendente.anotarPedido();
         atendente.servirMesa();
         atendente.receberPagamento();
         
-    
+        // Instanciação do cliente
         Cliente cliente = new Cliente();
         cliente.escolherCombo();
         cliente.escolherLanche();
@@ -54,20 +56,19 @@ public class Estabelecimento {
         cliente.escolherVitamina();
         cliente.fazerPedido();
         cliente.pagarConta();
-
-        //nao deveria, mas estabelecimento nao definiu normas de atendimento
+        
+        // O cliente não deveria ter acesso a essa ação, mas não há regras definidas
         /* cliente.pegaPedidoBalcao(); */
-
-        //ação sigilosa
+        
+        // Método sigiloso, não deveria estar disponível para o cliente
         /* cliente.consultaSaldo(); */
-
-        //ação que o cliente nao precisa saber
+        
+        // Métodos internos da cozinha que não devem ser acessíveis externamente
         /* cozinheiro.trocarGas(almoxarife); */
         
-        //ação indisponivel
+        // Ações indisponíveis para certas funções
         /* cozinheiro.trocarGas(atendente); */
         /* atendente.trocarGas(); */
-        /* almoxarife.entregarIngrediente();  */
-
+        /* almoxarife.entregarIngrediente(); */
     }
 }

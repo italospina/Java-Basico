@@ -4,7 +4,7 @@ import lanchonete.atendimento.Atendente;
 
 public class Cozinheiro {
 
-    // metodos que ten que estar privados
+    // Métodos privados (ações internas do cozinheiro que não devem ser acessadas externamente)
     private void lavarIngredientes() {
         System.out.println("Ingredientes lavados");
     }
@@ -13,12 +13,12 @@ public class Cozinheiro {
         System.out.println("Ingredientes batidos no liquidificador");
     }
 
-    private void selecionaIngredienteLanche() {
-        System.out.println("Ingrediente selecionado para lanche");
+    private void selecionarIngredienteLanche() {
+        System.out.println("Ingrediente selecionado para o lanche");
     }
 
-    private void selecionaIngredienteVitamina() {
-        System.out.println("Ingrediente selecionado para vitamina");
+    private void selecionarIngredienteVitamina() {
+        System.out.println("Ingrediente selecionado para a vitamina");
     }
 
     private void prepararLanche() {
@@ -26,30 +26,30 @@ public class Cozinheiro {
     }
 
     private void prepararVitamina() {
-        System.out.println("Vitamina preparado");
+        System.out.println("Vitamina preparada");
     }
 
-    private void preparaCombo() {
+    private void prepararCombo() {
         prepararLanche();
         prepararVitamina();
         System.out.println("Combo preparado");
     }
 
     private void fritarIngredienteLanche() {
-        System.out.println("Ingrediente frito para lanche");
+        System.out.println("Ingrediente frito para o lanche");
     }
 
-    private void trocarGas ( Almoxarife almoxarife) {
+    private void trocarGas(Almoxarife almoxarife) {
         almoxarife.trocarGas();
         System.out.println("Gás trocado");
     }
 
     private void pedirIngrediente(Almoxarife almoxarife) {
         almoxarife.pedirIngrediente();
-        System.out.println("Ingrediente pedido");
+        System.out.println("Ingrediente solicitado");
     }
 
-    // metodos que podem ser publicos
+    // Métodos públicos (ações disponíveis para outras classes)
     public void adicionarLancheBalcao() {
         System.out.println("Lanche adicionado ao balcão");
     }
@@ -64,13 +64,11 @@ public class Cozinheiro {
         System.out.println("Combo adicionado ao balcão");
     }
 
-
-    //cozinheiro não pode solicitar ao atendente
+    // O cozinheiro não pode solicitar a troca de gás ao atendente
     /* 
     public void trocarGas(Atendente atendente) {
         atendente.trocarGas();
         System.out.println("Gás trocado");
-        
     }
     */
 }

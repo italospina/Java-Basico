@@ -2,12 +2,12 @@ package lanchonete.area.cliente;
 
 public class Cliente {
 
-    //metodos privados
-    private void consultaSaldo() {
+    // Métodos privados (ações internas do cliente que não devem ser acessadas externamente)
+    private void consultarSaldo() {
         System.out.println("Cliente consultando saldo");
     }
     
-    //metodos publicos
+    // Métodos públicos (ações disponíveis para outras classes)
     public void escolherLanche() {
         System.out.println("Cliente escolhendo lanche");
     }
@@ -34,9 +34,9 @@ public class Cliente {
         System.out.println("Cliente pagando conta");
     }
 
-    //metodos que nao deveriam existir
+    // Métodos que não deveriam estar disponíveis para o cliente
     /* 
-    public void pegaPedidoBalcao() {
+    public void pegarPedidoBalcao() {
         System.out.println("Cliente pegando pedido no balcão");
     } 
     */
